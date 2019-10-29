@@ -55,7 +55,7 @@ router.post("/nueva-nota",async (req,res)=>{
            await Usuario.updateOne({_id:validate.id},
             {$push:{
                     notas:
-                        {titulo:req.body.titulo,descripcion:req.body.descripcion}
+                        {titulo:req.body.titulo,descripcion:req.body.descripcion,fecha:req.body.fecha}
                     }
             }
             
@@ -76,7 +76,7 @@ router.post("/modificar-nota",async(req,res)=>{
             res.json({error:"no access-token"})
         }else{
             Usuario.update({_id:validate.id, 'notas._id':req.body.id},
-            {$set:{'notas.$.titulo':req.body.titulo,'notas.$.descripcion':req.body.descripcion}}, function (error, result) {
+            {$set:{'notas.$.titulo':req.body.titulo,'notas.$.descripcion':req.body.descripcion,'notas.$.fecha':req.body.fecha}}, function (error, result) {
                 console.log(result);
             }
             );

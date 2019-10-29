@@ -29,7 +29,7 @@ router.post("/login",async(req,res)=>{
         res.status(400).json({"advertencia":"email y/o password incorrectos"});
     }else{
         const token=await jwt.sign({id:user._id},"mysecret");
-        res.json({"access-token":token,user:user.user,id:user._id});
+        res.json({"token":token,user:user.user,id:user._id});
     }
     
 })

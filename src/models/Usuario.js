@@ -2,19 +2,17 @@ const {Schema,model}=require('mongoose');
 const bcrypt=require('bcryptjs');
 const SchemaUsuario=new Schema({
         user:{
-            type:String,
-            unique:true
+            type:String
         },
         email:{
             type:String,
-            required:true,
-            unique:true,
+            required:true
         },
         password:String,
         notas:[{
             titulo:String,
             descripcion:String,
-            fecha:{type:Date,default:Date.now}
+            fecha:String
         }]
 })
 

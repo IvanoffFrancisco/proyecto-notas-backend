@@ -1,6 +1,6 @@
 require('dotenv').config();
-const cross=require('cross');
 const app=require('./app');
+const cors=require('cors');
 require('./database');
 
 function main(){
