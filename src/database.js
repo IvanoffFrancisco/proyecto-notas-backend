@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 
-mongoose.connect("mongodb://localhost/Note",{
+mongoose.connect("mongodb+srv://nicolas:nehcmfKuG1Ojjwmm@udemy-dojtx.mongodb.net/notas?retryWrites=true&w=majority",{
     useCreateIndex:true,
     useFindAndModify:true,
     useNewUrlParser:true,
