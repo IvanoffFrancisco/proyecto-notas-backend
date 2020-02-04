@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 
 //config
-app.set("port",process.env.PORT || 4000);
+app.set("PORT",process.env.PORT || 4000);
 
 // Configurar cabeceras y cors
 app.use((req, res, next) => {
