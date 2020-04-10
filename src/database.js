@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-mongoose.connect("mongodb+srv://nicoo:O9UuAqW29iPXWrkT@udemy-dojtx.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect(process.env.URL,{
     useCreateIndex:true,
     useFindAndModify:true,
     useNewUrlParser:true,
